@@ -3,8 +3,6 @@ title: Photo Tracing Rig
 tags: [tool, 3d-printing]
 ---
 
-# Photo Tracing Rig
-
 When I was designing [[glasses|glasses frames]] for my brother, I needed accurate top-down photos of the lens to trace in Onshape. Holding my phone by hand wasn't cutting it. The angles were inconsistent and the measurements were off enough that early prototypes didn't fit at all.
 
 So I built a simple rig out of 10x10mm aluminum extrusion. The phone sits on top of the frame, spaced so the camera isn't blocked and the phone can't fall through. The cutting mat underneath provides a grid that I use to set the scale in Onshape, so whatever I'm photographing comes in at the right dimensions.

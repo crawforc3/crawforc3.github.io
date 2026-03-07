@@ -3,8 +3,6 @@ title: Autonomous Rover Build
 tags: [project, robotics, ardupilot]
 ---
 
-# Autonomous Ground Vehicle
-
 I'm building a rover that can navigate my neighborhood autonomously. GPS waypoints, curb climbing, the whole deal. The goal is to deliver homebrew to my neighbors without me having to walk it over myself. I make beer, they get beer, everybody wins. Except now I have to build a robot.
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.

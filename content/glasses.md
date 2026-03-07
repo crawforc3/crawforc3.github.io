@@ -3,8 +3,6 @@ title: 3D Printed Glasses Frames
 tags: [project, 3d-printing]
 ---
 
-# 3D Printed Glasses Frames
-
 My brother's glasses frames broke but he still had the lenses. I thought it would be a fun project to design and print new frames for him. Good excuse to learn more CAD, and how hard could it be?
 
 Pretty hard, it turns out.

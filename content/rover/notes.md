@@ -3,8 +3,6 @@ title: Rover Design Notes
 tags: [project, robotics]
 ---
 
-# Design Notes and Calculations
-
 Hand-drawn notes and calculations from the rover design process.
 
 ## Early Concept Sketches

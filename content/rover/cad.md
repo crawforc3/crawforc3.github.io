@@ -3,8 +3,6 @@ title: Rover CAD Models
 tags: [project, robotics]
 ---
 
-# CAD Models
-
 Onshape CAD models and renders from the rover design process.
 
 ## Complete Assembly

@@ -3,8 +3,6 @@ title: Bruder Recycling Truck Repair
 tags: [repair, 3d-printing]
 ---
 
-# Bruder Recycling Truck Repair
-
 My kid's Bruder recycling truck is one of his favorite toys. The arm that lifts the garbage cans and dumps the contents into the truck broke, and the truck lost its main feature. So I decided to reverse engineer the part and print a replacement.
 
 ## Modeling the Part
