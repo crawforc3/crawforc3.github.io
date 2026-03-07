@@ -211,5 +211,5 @@ The wheels need to climb curbs. Standard curbs are about 15cm, so I designed 17c
 
 ## See Also
 
-- [[rover/cad|CAD Models]] - Onshape renders and design views
-- [[rover/notes|Design Notes and Calculations]] - Hand-drawn sketches and calculations
+- [[misc/cad|CAD Models]] - Onshape renders and design views
+- [[misc/notes|Design Notes and Calculations]] - Hand-drawn sketches and calculations
