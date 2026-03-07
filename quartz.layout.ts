@@ -42,6 +42,17 @@ export const defaultContentPageLayout: PageLayout = {
       mapFn: (node) => {
         if (node.slugSegment === "misc") node.displayName = "Misc"
       },
+      sortFn: (a, b) => {
+        const order = ["rover"]
+        const pinBottom = ["misc"]
+        const aBottom = pinBottom.includes(a.slugSegment)
+        const bBottom = pinBottom.includes(b.slugSegment)
+        if (aBottom !== bBottom) return aBottom ? 1 : -1
+        const aTop = order.indexOf(a.slugSegment)
+        const bTop = order.indexOf(b.slugSegment)
+        if (aTop !== -1 || bTop !== -1) return (aTop === -1 ? 999 : aTop) - (bTop === -1 ? 999 : bTop)
+        return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
+      },
     }),
   ],
   right: [
@@ -68,6 +79,17 @@ export const defaultListPageLayout: PageLayout = {
     Component.Explorer({
       mapFn: (node) => {
         if (node.slugSegment === "misc") node.displayName = "Misc"
+      },
+      sortFn: (a, b) => {
+        const order = ["rover"]
+        const pinBottom = ["misc"]
+        const aBottom = pinBottom.includes(a.slugSegment)
+        const bBottom = pinBottom.includes(b.slugSegment)
+        if (aBottom !== bBottom) return aBottom ? 1 : -1
+        const aTop = order.indexOf(a.slugSegment)
+        const bTop = order.indexOf(b.slugSegment)
+        if (aTop !== -1 || bTop !== -1) return (aTop === -1 ? 999 : aTop) - (bTop === -1 ? 999 : bTop)
+        return a.displayName.localeCompare(b.displayName, undefined, { numeric: true, sensitivity: "base" })
       },
     }),
   ],
