@@ -13,6 +13,8 @@ Here's the thing about building robots: you don't just learn one skill. You lear
 ![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
 *Current state of the build*
 
+![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
+
 ## Current Status
 
 The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me.
@@ -42,8 +44,6 @@ The fix was to redesign the gearbox so the output shaft comes out the same side 
 *Gearbox in context with the rest of the rover*
 
 The gearbox mount ended up being straightforward. Right now I'm printing parts and assembling, waiting to find the next problem.
-
-![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
 
 ## Build Progress
 
