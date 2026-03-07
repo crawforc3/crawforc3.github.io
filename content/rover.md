@@ -15,33 +15,7 @@ Here's the thing about building robots: you don't just learn one skill. You lear
 
 ## Current Status
 
-The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me.
-
-I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts that worked well for prototyping, but I needed a model in Onshape to get all the measurements right before cutting aluminum rods. So I designed my own.
-
-![CAD render of a custom universal joint design](images/2026-02-custom-universal-joint-cad.png)
-*Custom universal joint design*
-
-![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
-*Dual cardan universal joint prototype for solving the gearbox alignment problem*
-
-With the right-side linkage CAD'd up, I mirrored it for the left side and immediately ran into a new problem: the motors are trying to occupy the same space. Both gearboxes have their motors pointing toward the center of the rover, so when you mirror them they collide.
-
-![Top-down CAD view of rear axle showing two gearboxes with motors overlapping in the center](images/2026-02-rear-axle-gearbox-motor-overlap-cad.png)
-*Top-down view showing the motor overlap problem when both gearboxes are in place*
-
-The fix was to redesign the gearbox so the output shaft comes out the same side as the motor. Flipping the gearbox puts the motor toward the wheel instead of toward the center, so there's no more overlap. The redesign is done and both gearboxes fit in Onshape without any conflicts.
-
-![Top-down CAD view of rear axle showing both redesigned gearboxes with motors pointing outward](images/2026-02-gearbox-same-side-output-top.png)
-*Top view showing the motors no longer overlapping*
-
-![Front CAD view of rear axle with redesigned gearboxes and wheels](images/2026-02-gearbox-same-side-output-front.png)
-*Front view of the rear axle assembly*
-
-![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
-*Gearbox in context with the rest of the rover*
-
-The gearbox mount ended up being straightforward. Right now I'm printing parts and assembling, waiting to find the next problem.
+The drivetrain is the current focus. The gearbox is working and integrated — it took a dual cardan universal joint to solve a height alignment issue between the gearbox output and the wheels, and a full redesign to fix a motor collision when mirroring to the other side. Right now I'm printing parts and assembling, waiting to find the next problem.
 
 ## Build Progress
 
@@ -66,7 +40,7 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 ![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
 *Drivetrain — gearboxes, CV joints, and wheels*
 
-Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40T brushed motors. Getting power from the motor shafts to the wheels required flexible couplers. Rigid connections would bind up with any misalignment, and there's always misalignment. The bearings are 6000RS with a 10mm bore, and I spent way too long getting the shaft diameter right. 9.98mm fits a 10mm bore smoothly. 10.02mm does not.
+Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40T brushed motors. Brushless would be more efficient, but at 3 mph efficiency doesn't matter. Brushed motors give smooth low-speed control without sensored feedback or fancy ESC tuning, and they're cheaper. Getting power from the motor shafts to the wheels required flexible couplers. Rigid connections would bind up with any misalignment, and there's always misalignment. The bearings are 6000RS with a 10mm bore, and I spent way too long getting the shaft diameter right. 9.98mm fits a 10mm bore smoothly. 10.02mm does not.
 
 ![White 3D-printed motor mount with silver flexible coupler connecting motor shaft to axle](images/2025-09-19-3d-printed-wheel-hub-with-motor-mount.jpg)
 *Early motor mount prototype with flexible coupler*
@@ -100,12 +74,40 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 ![Black gearbox with 540 brushed motor attached to a black wheel with knobby tire](images/2026-02-gearbox-motor-wheel-assembly.jpg)
 *Gearbox and motor assembly with wheel attached*
 
+Integrating the gearbox into the rover turned out to be its own challenge. The gearbox output doesn't line up with the wheel height — fixing that would destroy ground clearance and require a full frame redesign. Instead, I'm using a dual cardan universal joint to connect the gearbox to the wheel at an angle. A single universal joint causes the output to oscillate faster and slower through each rotation even at constant input speed. A dual cardan joint uses two universal joints so the oscillations cancel, giving constant velocity output.
+
+I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts that worked for prototyping, but I needed a model in Onshape to get the measurements right before cutting aluminum rods. So I designed my own.
+
+![CAD render of a custom universal joint design](images/2026-02-custom-universal-joint-cad.png)
+*Custom universal joint design*
+
+![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
+*Dual cardan universal joint prototype*
+
+With the right-side linkage done, I mirrored it for the left side and hit a new problem: both gearboxes have their motors pointing toward the center of the rover, so when mirrored they collide.
+
+![Top-down CAD view of rear axle showing two gearboxes with motors overlapping in the center](images/2026-02-rear-axle-gearbox-motor-overlap-cad.png)
+*Motor overlap with both gearboxes in place*
+
+The fix was to redesign the gearbox so the output shaft exits the same side as the motor. Flipping it puts the motor toward the wheel instead of the center — no more overlap.
+
+![Top-down CAD view of rear axle showing both redesigned gearboxes with motors pointing outward](images/2026-02-gearbox-same-side-output-top.png)
+*Redesigned gearboxes — motors no longer overlapping*
+
+![Front CAD view of rear axle with redesigned gearboxes and wheels](images/2026-02-gearbox-same-side-output-front.png)
+*Front view of the rear axle*
+
+![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
+*Gearbox in context with the rest of the rover*
+
+The gearbox mount ended up being straightforward. Right now I'm printing parts and assembling, waiting to find the next problem.
+
 ### Steering
 
 ![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
 *Ackerman steering geometry in motion*
 
-The steering knuckles are 3D-printed and implement Ackerman geometry. A Zoskay DS3235 servo provides 35kg-cm of torque, which is enough to turn the wheels even when the rover is sitting still on pavement.
+The steering knuckles are 3D-printed and implement Ackerman geometry. The inside wheel turns sharper than the outside wheel through a turn, just like a car. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's GroundSteering logic. A Zoskay DS3235 servo provides 35kg-cm of torque, enough to turn the wheels even when the rover is sitting still on pavement.
 
 The servo mount took four tries to get right. First one didn't fit the servo. Second one had screw holes that were too big. Third one didn't account for the wire coming out of the servo. Fourth time I just removed one side of the mount entirely so the servo could slide in from the side. Sometimes the simple solution is the one you should've tried first.
 
@@ -129,7 +131,7 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 
 ### Wheels and Tires
 
-I printed my own wheels. 17cm diameter, 6.5cm wide, with a hex hub interface so they pop on and off easily. The wheels are PLA, rigid enough to hold their shape. The tires are TPU, which is flexible and grippy. Press-fitting 6000RS bearings into PLA hubs requires getting the hole diameter exactly right. Too tight and the bearing won't go in. Too loose and it falls out. I got it right eventually.
+I printed my own wheels. Standard curbs are about 15cm, so I went with 17cm diameter to clear them with some margin. They're 6.5cm wide, with a hex hub interface so they pop on and off easily. The wheels are PLA, rigid enough to hold their shape. The tires are TPU, flexible and grippy. I went with 6000RS bearings over cheaper 608 skateboard bearings because the deeper groove handles radial loads better when you're hauling beer over rough terrain. Press-fitting them into PLA hubs requires getting the hole diameter exactly right. Too tight and the bearing won't go in. Too loose and it falls out. I got it right eventually.
 
 ![White PLA wheel hub sitting on 3D printer bed with honeycomb infill pattern visible](images/2025-09-19-wheel-hub-on-printer-bed.jpg)
 *PLA wheel hub fresh off the printer*
@@ -174,24 +176,6 @@ Inside the enclosure, I designed caddies for the batteries, flight controller, a
 ### ArduPilot Configuration
 
 I spent three days figuring out that "Roll" controls steering in rover mode, not "Yaw" like you'd expect. The motors use SERVO function 70 (throttle), and steering uses function 26 (GroundSteering). Now it makes sense. At the time, it did not.
-
-## Design Decisions
-
-### Ackerman Steering Geometry
-
-I went with Ackerman steering instead of skid-steer. The inside wheel turns sharper than the outside wheel during a turn, which is how actual cars work. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's steering logic. Ackerman plays nice with the GroundSteering servo function and doesn't leave rubber all over my driveway.
-
-### 3D Printing
-
-When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
-
-### Brushed vs Brushless Motors
-
-Brushed motors. I know, I know. Brushless is more efficient. But at 3 mph, efficiency doesn't matter. What matters is smooth low-speed control, and brushed motors do that without needing sensored feedback or fancy ESC tuning. They're also cheaper, and I've already spent enough on this project.
-
-### Wheel Design
-
-The wheels need to climb curbs. Standard curbs are about 15cm, so I designed 17cm diameter wheels to clear them with some margin. I went with 6000RS bearings instead of the cheaper 608 skateboard bearings because the deeper groove handles radial loads better. When you're carrying 10 pounds of beer over rough terrain, you want bearings that won't complain.
 
 ## Specifications
 
