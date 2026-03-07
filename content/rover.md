@@ -7,9 +7,6 @@ I'm building a rover that can navigate my neighborhood autonomously. GPS waypoin
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.
 
-![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
-*Proposed final design*
-
 ![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
 *Current state of the build*
 
