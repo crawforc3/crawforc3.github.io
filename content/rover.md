@@ -7,15 +7,14 @@ I'm building a rover that can navigate my neighborhood autonomously. GPS waypoin
 
 Here's the thing about building robots: you don't just learn one skill. You learn twelve. I started this project knowing how to write software. Now I'm doing CAD modeling, Ackerman steering geometry, aluminum fabrication, 3D printing in multiple materials, ArduPilot configuration, and spending way too much time thinking about gear ratios. Each problem solved reveals three more problems I didn't know existed.
 
-![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
-*CAD render of the current design*
-
 ![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
 *Current state of the build*
 
 ![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
+*Drivetrain — gearboxes, CV joints, and wheels*
 
 ![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
+*Ackerman steering geometry*
 
 ## Current Status
 
@@ -103,6 +102,9 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 
 ### Steering
 
+![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
+*Ackerman steering geometry in motion*
+
 The steering knuckles are 3D-printed and implement Ackerman geometry. A Zoskay DS3235 servo provides 35kg-cm of torque, which is enough to turn the wheels even when the rover is sitting still on pavement.
 
 The servo mount took four tries to get right. First one didn't fit the servo. Second one had screw holes that were too big. Third one didn't account for the wire coming out of the servo. Fourth time I just removed one side of the mount entirely so the servo could slide in from the side. Sometimes the simple solution is the one you should've tried first.
@@ -166,18 +168,22 @@ Inside the enclosure, I designed caddies for the batteries, flight controller, a
 ![Inside of enclosure showing white 3D-printed trays holding batteries and electronics with velcro straps](images/2025-12-electronics-caddies-detail.jpg)
 *Enclosure with batteries and ESCs installed in caddies*
 
-ArduPilot configuration was its own adventure. I spent three days figuring out that "Roll" controls steering in rover mode, not "Yaw" like you'd expect. The motors use SERVO function 70 (throttle), and steering uses function 26 (GroundSteering). Now it makes sense. At the time, it did not.
-
 ![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
 
-## Design Decisions
+### ArduPilot Configuration
 
-When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
+I spent three days figuring out that "Roll" controls steering in rover mode, not "Yaw" like you'd expect. The motors use SERVO function 70 (throttle), and steering uses function 26 (GroundSteering). Now it makes sense. At the time, it did not.
+
+## Design Decisions
 
 ### Ackerman Steering Geometry
 
 I went with Ackerman steering instead of skid-steer. The inside wheel turns sharper than the outside wheel during a turn, which is how actual cars work. Skid-steer would've been simpler mechanically, but it tears up the tires and fights ArduPilot's steering logic. Ackerman plays nice with the GroundSteering servo function and doesn't leave rubber all over my driveway.
+
+### 3D Printing
+
+When I look at a component and it's \$20 but I need four of them, maybe more if I break something during testing, it starts to make sense to design it myself and 3D print it. The money goes further buying tools that help me make parts than buying parts that might not fit right anyway. Half the parts on this rover are custom printed for exactly this reason.
 
 ### Brushed vs Brushless Motors
 
