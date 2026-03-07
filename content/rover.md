@@ -101,6 +101,9 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 
 ### Steering
 
+![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
+*Ackerman steering geometry in motion*
+
 The steering knuckles are 3D-printed and implement Ackerman geometry. A Zoskay DS3235 servo provides 35kg-cm of torque, which is enough to turn the wheels even when the rover is sitting still on pavement.
 
 The servo mount took four tries to get right. First one didn't fit the servo. Second one had screw holes that were too big. Third one didn't account for the wire coming out of the servo. Fourth time I just removed one side of the mount entirely so the servo could slide in from the side. Sometimes the simple solution is the one you should've tried first.
@@ -122,9 +125,6 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 
 ![Top-down view of aluminum frame with steering knuckles and servo mounted, before steering arm installation](images/2025-11-steering-assembly-on-frame.jpg)
 *Steering assembly mounted on the frame*
-
-![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2025-10-ackerman-steering-demo.gif)
-*Ackerman steering geometry in motion*
 
 ### Wheels and Tires
 
