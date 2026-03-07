@@ -15,6 +15,8 @@ Here's the thing about building robots: you don't just learn one skill. You lear
 
 ![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
 
+![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
+
 ## Current Status
 
 The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me.
@@ -100,9 +102,6 @@ I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler g
 *Gearbox and motor assembly with wheel attached*
 
 ### Steering
-
-![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
-*Ackerman steering geometry in motion*
 
 The steering knuckles are 3D-printed and implement Ackerman geometry. A Zoskay DS3235 servo provides 35kg-cm of torque, which is enough to turn the wheels even when the rover is sitting still on pavement.
 
