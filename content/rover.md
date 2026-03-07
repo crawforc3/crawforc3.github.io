@@ -13,12 +13,6 @@ Here's the thing about building robots: you don't just learn one skill. You lear
 ![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
 *Current state of the build*
 
-![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
-*Drivetrain — gearboxes, CV joints, and wheels*
-
-![CAD animation of Ackerman steering showing front wheels turning through full range of motion](images/2026-03-steering-assembly-animation.gif)
-*Ackerman steering geometry*
-
 ## Current Status
 
 The gearbox is working but integrating it into the rover has been a challenge. I haven't found a way to make the gearbox output line up with the current wheel level. Making them level drastically reduces ground clearance, and I would also need to redesign the frame and steering mount components. So instead I'm using a dual cardan universal joint to connect the gearbox output to the wheels at an angle. A single universal joint has a problem: even with a constant input speed, the output oscillates faster and slower through each rotation. But a dual cardan joint uses two universal joints so the oscillation from the first cancels out the second, giving you constant velocity output. Sounds like black magic to me.
@@ -68,6 +62,9 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 *Frame with steering and motor mounts installed*
 
 ### Drivetrain
+
+![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
+*Drivetrain — gearboxes, CV joints, and wheels*
 
 Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40T brushed motors. Getting power from the motor shafts to the wheels required flexible couplers. Rigid connections would bind up with any misalignment, and there's always misalignment. The bearings are 6000RS with a 10mm bore, and I spent way too long getting the shaft diameter right. 9.98mm fits a 10mm bore smoothly. 10.02mm does not.
 
