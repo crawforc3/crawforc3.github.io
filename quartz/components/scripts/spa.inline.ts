@@ -62,13 +62,6 @@ async function _navigate(url: URL, isBack: boolean = false) {
   isNavigating = true
   startLoading()
 
-  // Use a trailing-slash URL for resolving relative paths (e.g. ../images/foo.png)
-  // but fetch the original URL so flat pages (page.html) are found correctly.
-  const normalizeUrl =
-    !url.pathname.endsWith("/") && !url.pathname.includes(".")
-      ? new URL(url.pathname + "/", url)
-      : url
-
   p = p || new DOMParser()
   const contents = await fetchCanonical(url)
     .then((res) => {
@@ -94,7 +87,7 @@ async function _navigate(url: URL, isBack: boolean = false) {
   cleanupFns.clear()
 
   const html = p.parseFromString(contents, "text/html")
-  normalizeRelativeURLs(html, normalizeUrl)
+  normalizeRelativeURLs(html, url)
 
   let title = html.querySelector("title")?.textContent
   if (title) {
