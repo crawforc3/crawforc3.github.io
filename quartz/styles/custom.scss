@@ -1,0 +1,112 @@
+@use "./base.scss";
+
+// put your custom CSS here!
+
+// Print/export button for resume
+.print-button {
+  background-color: var(--secondary);
+  color: var(--darkgray);
+  border: 1px solid var(--darkgray);
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+
+  &:hover {
+    background-color: var(--tertiary);
+    color: var(--light);
+  }
+}
+
+// Print styles for resume page
+@media print {
+  // Hide navigation and UI elements
+  .page-header,
+  .sidebar,
+  .left,
+  .right,
+  .backlinks,
+  .graph,
+  .toc,
+  .explorer,
+  .darkmode,
+  .search,
+  .breadcrumb-container,
+  footer,
+  .footer,
+  .page-footer,
+  .spacer,
+  .print-button {
+    display: none !important;
+  }
+
+  // Make content full width
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .center {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  article {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  // Resume-specific print styles
+  .page[data-slug="resume"] {
+    h1 {
+      font-size: 24pt !important;
+      margin-bottom: 0.25em !important;
+    }
+
+    h2 {
+      font-size: 14pt !important;
+      border-bottom: 1px solid #333 !important;
+      padding-bottom: 0.2em !important;
+      margin-top: 1em !important;
+    }
+
+    h3 {
+      font-size: 12pt !important;
+      margin-bottom: 0.2em !important;
+    }
+
+    p, li {
+      font-size: 10pt !important;
+      line-height: 1.4 !important;
+    }
+
+    ul {
+      margin: 0.3em 0 !important;
+      padding-left: 1.5em !important;
+    }
+
+    li {
+      margin-bottom: 0.2em !important;
+    }
+
+    hr {
+      margin: 0.75em 0 !important;
+    }
+
+    a {
+      color: blue !important;
+    }
+  }
+
+  // Prevent page breaks inside sections
+  h2, h3 {
+    page-break-after: avoid !important;
+  }
+
+  ul, p {
+    page-break-inside: avoid !important;
+  }
+}
