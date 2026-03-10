@@ -100,7 +100,14 @@ The fix was to redesign the gearbox so the output shaft exits the same side as t
 ![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
 *Gearbox in context with the rest of the rover*
 
-The gearbox mount ended up being straightforward. Right now I'm printing parts and assembling, waiting to find the next problem.
+The gearbox mount ended up being straightforward. With all the pieces together, I ran the first test of a complete drivetrain assembly — motor, gearbox, CV joints, and wheel — all spinning together for the first time.
+
+<video controls width="100%">
+  <source src="../images/2026-03-drivetrain-first-wheel-test.mp4" type="video/mp4">
+</video>
+*First test of the fully assembled drivetrain for one wheel*
+
+Right now I'm printing parts and assembling, waiting to find the next problem.
 
 ### Steering
 
