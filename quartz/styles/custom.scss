@@ -2,6 +2,30 @@
 
 // put your custom CSS here!
 
+// Larger body text
+article p,
+article li {
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+// Smaller images — cap width and center
+article img {
+  max-width: 65%;
+  display: block;
+  margin: 0 auto;
+}
+
+// Fix TOC entries getting clipped in the right sidebar
+.toc {
+  overflow-y: auto;
+}
+
+// Fix anchor scroll offset — headings land behind the top spacing otherwise
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id] {
+  scroll-margin-top: 6rem;
+}
+
 // Print/export button for resume
 .print-button {
   background-color: var(--secondary);
