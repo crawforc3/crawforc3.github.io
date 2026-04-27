@@ -23,6 +23,8 @@ The drivetrain is the current focus. The gearbox is working and integrated — i
 
 The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEGO. I can move things around, drill new holes, and adjust the layout without starting over. The joints use M6 tapped holes. I learned to tap threads into aluminum, which is more satisfying than it has any right to be.
 
+<div class="image-grid">
+
 ![Several lengths of silver 2020 aluminum extrusion laid out on a workbench](images/2025-11-10-cut-aluminum-2020-frame-pieces.jpg)
 *Cut 2020 extrusion pieces before assembly*
 
@@ -35,12 +37,16 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 ![Aluminum frame with white 3D-printed motor mounts and steering components attached](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 *Frame with steering and motor mounts installed*
 
+</div>
+
 ### Drivetrain
 
 ![CAD animation of gearboxes, CV joints, and wheels spinning](images/2026-03-gearbox-cv-joints-wheels-animation.gif)
 *Drivetrain — gearboxes, CV joints, and wheels*
 
 Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40T brushed motors. Brushless would be more efficient, but at 3 mph efficiency doesn't matter. Brushed motors give smooth low-speed control without sensored feedback or fancy ESC tuning, and they're cheaper. Getting power from the motor shafts to the wheels required flexible couplers. Rigid connections would bind up with any misalignment, and there's always misalignment. The bearings are 6000RS with a 10mm bore, and I spent way too long getting the shaft diameter right. 9.98mm fits a 10mm bore smoothly. 10.02mm does not.
+
+<div class="image-grid">
 
 ![White 3D-printed motor mount with silver flexible coupler connecting motor shaft to axle](images/2025-09-19-3d-printed-wheel-hub-with-motor-mount.jpg)
 *Early motor mount prototype with flexible coupler*
@@ -51,6 +57,8 @@ Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40
 ![Complete assembly showing motor, coupler, bearing housing, and black wheel with tire attached](images/2025-09-28-complete-wheel-motor-test-assembly.jpg)
 *Complete drivetrain assembly with wheel attached*
 
+</div>
+
 The initial test drive was humbling. The rover couldn't drive over a small power cord in the garage. When I pushed throttle to the max, one of the motors started smoking. That's when I knew I couldn't get away from learning about gears and gear boxes.
 
 <video controls width="100%">
@@ -60,11 +68,15 @@ The initial test drive was humbling. The rover couldn't drive over a small power
 
 I designed a 2-stage gearbox that gives a 40:1 reduction. There are way cooler gear assemblies out there, but this one is mine.
 
+<div class="image-grid">
+
 ![Red 3D-printed 2-stage gearbox with motor attached, held in a vise on workbench](images/2026-01-2-stage-gearbox-40-1-reduction.jpg)
 *2-stage gearbox with motor attached*
 
 ![Black 3D-printed gearbox enclosure with lid open, showing two red spur gears and output shaft](images/2026-02-gearbox-open-enclosure-red-gears.jpg)
 *Current gearbox with red spur gears*
+
+</div>
 
 <video controls width="100%">
   <source src="../images/2026-01-gearbox-motor-test.mp4" type="video/mp4">
@@ -78,27 +90,30 @@ Integrating the gearbox into the rover turned out to be its own challenge. The g
 
 I [found 3D printable universal joint models](https://www.myminifactory.com/object/3d-print-universal-joint-for-5-10mm-shafts-66248) for 5-10mm shafts that worked for prototyping, but I needed a model in Onshape to get the measurements right before cutting aluminum rods. So I designed my own.
 
+<div class="image-grid">
+
 ![CAD render of a custom universal joint design](images/2026-02-custom-universal-joint-cad.png)
 *Custom universal joint design*
 
 ![Dual cardan universal joint connecting gearbox output shaft to wheel hub on aluminum frame](images/2026-02-dual-cardan-universal-joint-prototype.jpg)
 *Dual cardan universal joint prototype*
 
+</div>
+
 With the right-side linkage done, I mirrored it for the left side and hit a new problem: both gearboxes have their motors pointing toward the center of the rover, so when mirrored they collide.
 
-![Top-down CAD view of rear axle showing two gearboxes with motors overlapping in the center](images/2026-02-rear-axle-gearbox-motor-overlap-cad.png)
-*Motor overlap with both gearboxes in place*
-
 The fix was to redesign the gearbox so the output shaft exits the same side as the motor. Flipping it puts the motor toward the wheel instead of the center — no more overlap.
+
+<div class="image-grid">
 
 ![Top-down CAD view of rear axle showing both redesigned gearboxes with motors pointing outward](images/2026-02-gearbox-same-side-output-top.png)
 *Redesigned gearboxes — motors no longer overlapping*
 
-![Front CAD view of rear axle with redesigned gearboxes and wheels](images/2026-02-gearbox-same-side-output-front.png)
-*Front view of the rear axle*
 
 ![Isometric CAD view of full rover showing redesigned gearbox and electronics enclosure behind it](images/2026-02-gearbox-redesign-rover-context.png)
 *Gearbox in context with the rest of the rover*
+
+</div>
 
 The gearbox mount ended up being straightforward. With all the pieces together, I ran the first test of a complete drivetrain assembly — motor, gearbox, CV joints, and wheel — all spinning together for the first time.
 
@@ -118,6 +133,8 @@ The steering knuckles are 3D-printed and implement Ackerman geometry. The inside
 
 The servo mount took four tries to get right. First one didn't fit the servo. Second one had screw holes that were too big. Third one didn't account for the wire coming out of the servo. Fourth time I just removed one side of the mount entirely so the servo could slide in from the side. Sometimes the simple solution is the one you should've tried first.
 
+<div class="image-grid">
+
 ![Four white 3D-printed servo mounts arranged in a row showing design progression](images/2025-11-21-servo-mount-failed-prototypes.png)
 *Four iterations of servo mounts before getting it right*
 
@@ -136,9 +153,13 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 ![Top-down view of aluminum frame with steering knuckles and servo mounted, before steering arm installation](images/2025-11-steering-assembly-on-frame.jpg)
 *Steering assembly mounted on the frame*
 
+</div>
+
 ### Wheels and Tires
 
 I printed my own wheels. Standard curbs are about 15cm, so I went with 17cm diameter to clear them with some margin. They're 6.5cm wide, with a hex hub interface so they pop on and off easily. The wheels are PLA, rigid enough to hold their shape. The tires are TPU, flexible and grippy. I went with 6000RS bearings over cheaper 608 skateboard bearings because the deeper groove handles radial loads better when you're hauling beer over rough terrain. Press-fitting them into PLA hubs requires getting the hole diameter exactly right. Too tight and the bearing won't go in. Too loose and it falls out. I got it right eventually.
+
+<div class="image-grid">
 
 ![White PLA wheel hub sitting on 3D printer bed with honeycomb infill pattern visible](images/2025-09-19-wheel-hub-on-printer-bed.jpg)
 *PLA wheel hub fresh off the printer*
@@ -149,7 +170,11 @@ I printed my own wheels. Standard curbs are about 15cm, so I went with 17cm diam
 ![Two completed wheels with white hubs and black knobby tires side by side](images/2025-09-23-two-complete-wheel-assemblies.jpg)
 *Final wheels and tires*
 
+</div>
+
 The gearbox redesign needed a new drive wheel hub. I went with a 5-lug design, planning to use heat inserts in the wheel so the hub could bolt on cleanly. The problem was the lack of infill in the wheel. The heat inserts just fell right into the plastic. I don't want to waste the wheels though, so super glue will work for now. If I need to reprint the wheels I'll bump up the infill, though I didn't keep track of what I used for these ones. Lesson learned on documenting print settings. But I probably won't keep track of the next ones either.
+
+<div class="image-grid">
 
 ![Black 3D-printed wheel hub with 5-lug bolt pattern and metal shaft](images/2026-02-5-lug-wheel-hub.jpg)
 *New 5-lug wheel hub*
@@ -157,11 +182,15 @@ The gearbox redesign needed a new drive wheel hub. I went with a 5-lug design, p
 ![Wheel hub mounted inside black wheel with knobby tire](images/2026-02-wheel-hub-mounted-in-wheel.jpg)
 *Hub mounted in the wheel*
 
+</div>
+
 ### Electronics
 
 The brain is a SpeedyBee F405 WING running ArduPilot Rover firmware. It's a flight controller, but ArduPilot doesn't care that I'm on the ground. GPS comes from a Matek M10Q-5883 module with a built-in compass. RC control uses ExpressLRS protocol. Low latency, good range, and if I mess up the autonomous navigation I can take over manually.
 
 Power is two 3S LiPo batteries, 15000mAh each. That's 333Wh total, which should be enough to deliver a lot of beer before needing a recharge. Laying everything out on the garage floor helped me figure out what size enclosure I'd need.
+
+<div class="image-grid">
 
 ![Batteries, ESCs, and wiring spread out on concrete garage floor for sizing](images/2025-10-31-power-distribution-batteries-and-escs.jpg)
 *Planning the electronics layout on the garage floor*
@@ -169,7 +198,11 @@ Power is two 3S LiPo batteries, 15000mAh each. That's 333Wh total, which should 
 ![White 3D-printed enclosure with brass heat-set inserts visible in mounting holes](images/2025-12-electronics-enclosure-heat-inserts.jpg)
 *Enclosure with heat inserts installed*
 
+</div>
+
 Inside the enclosure, I designed caddies for the batteries, flight controller, and ESCs. Each component velcro-straps to a caddy, and the caddies screw into the enclosure where I added heat inserts. It keeps everything modular and easy to swap out when I inevitably fry something.
+
+<div class="image-grid">
 
 ![CAD render of electronics enclosure with component caddies sitting on their mounting holes](images/2026-02-electronics-enclosure-caddies-cad.png)
 *Enclosure with component caddies*
@@ -179,6 +212,8 @@ Inside the enclosure, I designed caddies for the batteries, flight controller, a
 
 ![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
+
+</div>
 
 ### ArduPilot Configuration
 

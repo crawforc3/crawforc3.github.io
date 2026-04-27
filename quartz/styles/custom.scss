@@ -9,11 +9,47 @@ article li {
   line-height: 1.75;
 }
 
+// More pronounced section headers
+article h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--secondary);
+}
+
+article h3 {
+  margin-top: 2rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--lightgray);
+}
+
 // Smaller images — cap width and center
 article img {
   max-width: 65%;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+// Captions — centered under images, smaller text
+article p > img + em {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+// Image grid — wrap consecutive images in <div class="image-grid"> in markdown
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0.5rem auto;
+  }
 }
 
 // Fix TOC entries getting clipped in the right sidebar
