@@ -10,7 +10,7 @@ Here's the thing about building robots: you don't just learn one skill. You lear
 ![CAD render showing a four-wheeled rover with aluminum frame, large knobby tires, and a rectangular electronics enclosure mounted on top](images/2025-11-final-rover-assembly-perspective.png)
 *CAD render of the current design*
 
-![Assembled rover with all four wheels, steering, and electronics enclosure on garage floor](images/current-status.jpg)
+![Rover on workbench with all four wheels and steering installed, batteries and wiring exposed on top of frame](images/current-status.jpg)
 *Current state of the build*
 
 ## Current Status
@@ -25,8 +25,8 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 
 <div class="image-grid">
 
-![Several lengths of silver 2020 aluminum extrusion laid out on a workbench](images/2025-11-10-cut-aluminum-2020-frame-pieces.jpg)
-*Cut 2020 extrusion pieces before assembly*
+![Two assembled 2020 aluminum rectangular frames on concrete floor](images/2025-11-10-cut-aluminum-2020-frame-pieces.jpg)
+*Assembled frame configurations on the floor*
 
 ![Hand holding a tap tool inserted into aluminum extrusion, cutting threads into the end](images/2025-11-11-tapping-threads-in-aluminum-frame.jpg)
 *Tapping M6 threads by hand*
@@ -34,7 +34,7 @@ The frame is 2020 T-slot aluminum extrusion, 24" x 18". It's basically adult LEG
 ![Rectangular aluminum frame on garage floor with four large black wheels placed at the corners](images/2025-11-11-frame-with-wheels-mockup.jpg)
 *First mockup with wheels placed for sizing*
 
-![Aluminum frame with white 3D-printed motor mounts and steering components attached](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
+![Aluminum frame with black 3D-printed motor mounts and steering components attached](images/2025-11-21-rover-frame-with-servo-and-motor-mounts.jpg)
 *Frame with steering and motor mounts installed*
 
 </div>
@@ -48,10 +48,10 @@ Two motors, two ESCs, one dream. The HOBBYWING QUICRUN 1080 G2 ESCs drive 540 40
 
 <div class="image-grid">
 
-![White 3D-printed motor mount with silver flexible coupler connecting motor shaft to axle](images/2025-09-19-3d-printed-wheel-hub-with-motor-mount.jpg)
-*Early motor mount prototype with flexible coupler*
+![Brushed motor installed in green 3D-printed motor mount housing on desk](images/2025-09-19-3d-printed-wheel-hub-with-motor-mount.jpg)
+*Early motor mount prototype*
 
-![Motor mounted in white 3D-printed housing with bearing block on workbench](images/2025-10-25-bearing-housing-with-servo-mount.jpg)
+![Motor mounted in black 3D-printed bearing housing on workbench with DS3235 servo alongside](images/2025-10-25-bearing-housing-with-servo-mount.jpg)
 *Testing the bearing housing and motor alignment*
 
 ![Complete assembly showing motor, coupler, bearing housing, and black wheel with tire attached](images/2025-09-28-complete-wheel-motor-test-assembly.jpg)
@@ -122,6 +122,9 @@ The gearbox mount ended up being straightforward. With all the pieces together, 
 </video>
 *First test of the fully assembled drivetrain for one wheel*
 
+![Overhead view of rover with all four gearboxes, CV joints, and wheels installed on aluminum frame](images/2026-04-drivetrain-complete-overhead.png)
+*All four wheel assemblies installed*
+
 Right now I'm printing parts and assembling, waiting to find the next problem.
 
 ### Steering
@@ -135,20 +138,20 @@ The servo mount took four tries to get right. First one didn't fit the servo. Se
 
 <div class="image-grid">
 
-![Four white 3D-printed servo mounts arranged in a row showing design progression](images/2025-11-21-servo-mount-failed-prototypes.png)
-*Four iterations of servo mounts before getting it right*
+![Three black 3D-printed servo mount iterations on a dark surface](images/2025-11-21-servo-mount-failed-prototypes.png)
+*Failed servo mount iterations*
 
-![White 3D-printed steering knuckle attached to aluminum frame rail](images/2025-10-25-steering-knuckle-prototype-on-frame.jpg)
+![Black 3D-printed steering knuckle with bearings mounted on aluminum frame rail](images/2025-10-25-steering-knuckle-prototype-on-frame.jpg)
 *Steering knuckle mounted to the frame*
 
-![Small white 3D-printed cylindrical sleeve that fits over servo splines](images/2025-11-servo-arm-sleeve.jpg)
-*Custom servo arm sleeve for the steering linkage*
+![Small dark servo arm with metal clevis attachment on cutting mat](images/2025-11-servo-arm-sleeve.jpg)
+*Custom servo arm for the steering linkage*
 
-![Blue servo motor installed in white mount with custom steering arm attached](images/2026-01-steering-servo-mount-and-arm.jpg)
+![DS3235 servo installed in black 3D-printed mount with custom arm on aluminum frame](images/2026-01-steering-servo-mount-and-arm.jpg)
 *Servo installed with mount and custom arm*
 
-![Top view of steering linkage showing tie rods connecting servo to both front knuckles](images/2026-01-steering-linkage-assembly.jpg)
-*Steering linkage*
+![3D-printed steering linkage bar on cutting mat](images/2026-01-steering-linkage-assembly.jpg)
+*Steering linkage bar*
 
 ![Top-down view of aluminum frame with steering knuckles and servo mounted, before steering arm installation](images/2025-11-steering-assembly-on-frame.jpg)
 *Steering assembly mounted on the frame*
@@ -195,7 +198,7 @@ Power is two 3S LiPo batteries, 15000mAh each. That's 333Wh total, which should 
 ![Batteries, ESCs, and wiring spread out on concrete garage floor for sizing](images/2025-10-31-power-distribution-batteries-and-escs.jpg)
 *Planning the electronics layout on the garage floor*
 
-![White 3D-printed enclosure with brass heat-set inserts visible in mounting holes](images/2025-12-electronics-enclosure-heat-inserts.jpg)
+![Black 3D-printed enclosure interior with brass heat-set inserts installed throughout](images/2025-12-electronics-enclosure-heat-inserts.jpg)
 *Enclosure with heat inserts installed*
 
 </div>
@@ -207,13 +210,16 @@ Inside the enclosure, I designed caddies for the batteries, flight controller, a
 ![CAD render of electronics enclosure with component caddies sitting on their mounting holes](images/2026-02-electronics-enclosure-caddies-cad.png)
 *Enclosure with component caddies*
 
-![Inside of enclosure showing white 3D-printed trays holding batteries and electronics with velcro straps](images/2025-12-electronics-caddies-detail.jpg)
-*Enclosure with batteries and ESCs installed in caddies*
+![Inside of black enclosure showing batteries and ESCs installed with wiring](images/2025-12-electronics-caddies-detail.jpg)
+*Enclosure with batteries and ESCs installed*
 
 ![Rover frame with steering linkage, motors, and electronics box assembled but no wheels attached](images/2025-11-dry-fit-steering-drivetrain-enclosure.jpg)
 *Dry fit of major components without wheels*
 
 </div>
+
+![Rover with V1 electronics enclosure bolted to frame, power switch on side, all four wheels installed](images/2026-04-electronics-enclosure-v1-on-rover.png)
+*V1 electronics enclosure installed on the rover*
 
 ### ArduPilot Configuration
 
